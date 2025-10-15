@@ -1,0 +1,73 @@
+@use "../global" as *;
+
+.c-btn {
+  background: #413c37;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: rem(240);
+  height: rem(54);
+  position: relative;
+  transition: 0.3s ease-in-out;
+  border: 1px solid #413c37;
+  @include mq(md) {
+    height: rem(54);
+  }
+}
+.c-btn:hover {
+  background: #fff;
+}
+
+.c-btn--306 {
+  width: rem(240);
+  height: rem(54);
+  @include mq(md) {
+    width: rem(306);
+    height: rem(60);
+  }
+}
+.c-btn--300 {
+  width: rem(300);
+}
+.c-btn__text {
+  color: #fff;
+  font-size: rem(15);
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+.c-btn:hover .c-btn__text {
+  color: #413c37;
+}
+.c-btn__arrow {
+  display: inline-block;
+  width: rem(28);
+  position: absolute;
+  right: rem(20);
+  top: 50%;
+  transform: translateY(-50%);
+}
+.c-btn__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(28);
+}
+.c-btn__arrow svg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
+.c-btn__path {
+  transition: 0.3s ease-in-out;
+  fill: #fff;
+}
+.c-btn:hover .c-btn__path {
+  fill: #413c37;
+}

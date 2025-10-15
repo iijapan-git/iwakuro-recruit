@@ -1,0 +1,37 @@
+@use "../global" as *;
+
+.p-gradation {
+  padding-top: rem(400);
+  padding-bottom: rem(200);
+  position: relative;
+  background: url(../images/common/gradation_bg.png) no-repeat center center /
+  cover;
+  @include mq(md) {
+    padding-top: rem(700);
+    padding-bottom: rem(300);
+  }
+}
+
+.p-gradation__content {
+  text-align: center;
+}
+
+.p-gradation__text-wrapper {
+}
+
+.p-gradation__text {
+  color: #fff;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 0.04em;
+  font-size: rem(14);
+  @include mq(md) {
+    font-size: rem(17);
+  }
+}
+.p-gradation__text + .p-gradation__text {
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(60);
+  }
+}

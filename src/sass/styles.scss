@@ -1,0 +1,102 @@
+// @use "./base/**";
+// @use "./plugin/**";
+// @use "./layout/**";
+// @use "./project/**";
+// @use "./component/**";
+
+
+// ===========================
+// Global
+// ===========================
+@use "./global/setting" as *;
+@use "./global/function" as *;
+@use "./global/index" as *;
+
+// ===========================
+// Base
+// ===========================
+@use "./base/reset";
+@use "./base/base";
+
+// ===========================
+// Layout
+// ===========================
+@use "./layout/_l-inner";
+
+// ===========================
+// Component
+// ===========================
+@use "./component/c-benefits-title";
+@use "./component/c-btn";
+@use "./component/c-left";
+@use "./component/c-page-en";
+@use "./component/c-page-ja";
+@use "./component/c-section-title";
+@use "./component/c-section-title02";
+@use "./component/c-section-title03";
+@use "./component/c-text-gradation";
+
+// ===========================
+// Project
+// ===========================
+@use "./project/p-404";
+@use "./project/p-about-concept";
+@use "./project/p-about-lineup";
+@use "./project/p-about-mv";
+@use "./project/p-about-service";
+@use "./project/p-about-story";
+@use "./project/p-about-strength";
+@use "./project/p-article";
+@use "./project/p-benefits";
+@use "./project/p-career";
+@use "./project/p-challenge";
+@use "./project/p-drawer";
+@use "./project/p-entry-guide";
+@use "./project/p-entry-form";
+@use "./project/p-facilities";
+@use "./project/p-feature";
+@use "./project/p-figures";
+@use "./project/p-footer";
+@use "./project/p-form";
+@use "./project/p-gradation";
+@use "./project/p-grad-cta";
+@use "./project/p-grad-faq";
+@use "./project/p-grad-flow";
+@use "./project/p-grad-recruitment";
+@use "./project/p-header";
+@use "./project/p-hear";
+@use "./project/p-home-topics";
+@use "./project/p-interview";
+@use "./project/p-interview-card";
+@use "./project/p-job-contents";
+@use "./project/p-job-flow";
+@use "./project/p-line";
+@use "./project/p-list01";
+@use "./project/p-loading";
+@use "./project/p-movie";
+@use "./project/p-mv";
+@use "./project/p-news";
+@use "./project/p-news-single";
+@use "./project/p-occupation";
+@use "./project/p-other";
+@use "./project/p-page-mv";
+@use "./project/p-pagination";
+@use "./project/p-pickup";
+@use "./project/p-power";
+@use "./project/p-project";
+@use "./project/p-question";
+@use "./project/p-reason";
+@use "./project/p-result";
+@use "./project/p-scroll-img";
+@use "./project/p-scroll-text";
+@use "./project/p-scroll";
+@use "./project/p-section-img";
+@use "./project/p-single-topics";
+@use "./project/p-single";
+@use "./project/p-thanks";
+@use "./project/p-top-about";
+@use "./project/p-top-image";
+@use "./project/p-top-interview";
+@use "./project/p-top-line";
+@use "./project/p-top-news";
+@use "./project/p-top-story";

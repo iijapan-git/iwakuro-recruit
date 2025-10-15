@@ -1,0 +1,117 @@
+@use "../global" as *;
+
+.p-single {
+}
+.p-single__content {
+  position: relative;
+}
+
+.p-single__img {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  width: 100vw;
+  margin-top: rem(40);
+  @include mq(md) {
+    margin-top: rem(47);
+  }
+}
+.p-single__img img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 375 /276;
+  @include mq(md) {
+    aspect-ratio: 1440 / 647;
+  }
+}
+
+.p-single__detail {
+  margin-top: rem(35);
+  @include mq(md) {
+    margin-top: initial;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.p-single__detail--left {
+  @include mq(md){
+    left: 0;
+  }
+}
+
+.p-single__number {
+  display: flex;
+  align-items: flex-end;
+  @include mq(md) {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.p-single__en {
+  font-family: $second-font-family;
+  font-size: rem(16);
+  color: $black;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  @include mq(md) {
+    letter-spacing: initial;
+    writing-mode: vertical-lr;
+    text-orientation: mixed;
+    padding-left: rem(8);
+  }
+}
+
+.p-single__num {
+  font-family: $second-font-family;
+  font-size: rem(30);
+  line-height: 1;
+  letter-spacing: 0.14em;
+  font-weight: 500;
+  color: $black;
+}
+
+.p-single__title {
+  background: #fff;
+  font-weight: 700;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+  font-size: rem(20);
+  margin-top: rem(30);
+  @include mq(md) {
+    margin-top: rem(31);
+    font-size: rem(40);
+    display: inline;
+    background: #fff;
+    box-decoration-break: clone; /* 改行後も背景適用 */
+  }
+}
+
+.p-single__sub-wrapper {
+  display: block;
+  margin-top: rem(30);
+  @include mq(md) {
+    margin-top: rem(36);
+  }
+}
+
+.p-single__sub {
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  color: $black;
+  display: inline-block;
+  font-size: rem(14);
+  font-weight: 500;
+  @include mq(md) {
+    font-weight: 700;
+    font-size: rem(20);
+    background: #fff;
+  }
+}
+
+.p-single__sub span {
+  font-family: $second-font-family;
+}

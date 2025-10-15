@@ -1,0 +1,232 @@
+@use "../global" as *;
+
+.p-other {
+  background: #f2f2f2;
+  overflow-x: clip;
+  padding-top: rem(70);
+  padding-bottom: rem(70);
+  @include mq(md) {
+    padding-top: rem(130);
+    padding-bottom: rem(100);
+  }
+}
+
+.p-other__content {
+  max-width: rem(1100);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+.p-other__block {
+}
+
+.p-other__link {
+  position: relative;
+  z-index: 2;
+  @include mq(md) {
+    display: flex;
+    align-items: center;
+  }
+}
+.p-other__link::before {
+  position: absolute;
+  content: "other stories";
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+  font-family: $second-font-family;
+  font-weight: 600;
+  font-size: rem(48);
+  left: rem(-20);
+  top: rem(-72);
+  z-index: 0;
+  white-space: nowrap;
+  @include mq(md) {
+    left: rem(-168);
+    top: rem(-120);
+    font-size: rem(160);
+  }
+}
+.p-other__link:hover {
+  opacity: 1;
+}
+.p-other__link:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.p-other__link--second {
+  position: relative;
+}
+.p-other__link--second::before {
+  position: absolute;
+  content: "other stories";
+  text-transform: uppercase;
+  color: #fff;
+  line-height: 1;
+  font-family: $second-font-family;
+  font-weight: 600;
+  left: initial;
+  top: initial;
+  z-index: 0;
+  white-space: nowrap;
+  font-size: rem(48);
+  bottom: rem(-72);
+  right: rem(-20);
+  @include mq(md) {
+    right: rem(-160);
+    bottom: rem(-120);
+    font-size: rem(160);
+  }
+}
+.p-other__link + .p-other__link {
+  margin-top: rem(45);
+}
+.p-other__img {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  @include mq(md) {
+    max-width: rem(789);
+  }
+}
+.p-other__img img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 335 / 278;
+  transition: 0.3s ease-in-out;
+  @include mq(md) {
+    aspect-ratio: 789 / 363;
+  }
+}
+.p-other__link:hover .p-other__img img {
+  transform: scale(1.05);
+}
+
+.p-other__detail {
+  position: relative;
+  margin-top: rem(-80);
+  z-index: 3;
+  @include mq(md) {
+    margin-left: rem(-64);
+    margin-top: rem(102);
+  }
+}
+.p-other__link:nth-child(even) .p-other__detail {
+  margin-left: initial;
+}
+.p-other__link:nth-child(even) .p-other__img {
+  @include mq(md) {
+    margin-left: rem(-200);
+  }
+}
+
+.p-other__en {
+  font-weight: 700;
+  font-family: $second-font-family;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+  background: #3264CA;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-size: rem(16);
+  @include mq(md) {
+    font-size: rem(20);
+  }
+}
+
+.p-other__title-wrapper {
+  margin-top: rem(9);
+}
+
+.p-other__title {
+  text-align: center;
+  font-weight: 600;
+  font-family: $second-font-family;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: rem(30);
+  color: $black;
+  font-size: rem(54);
+  text-align: left;
+  @include mq(md){
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    color: #fff;
+    font-size: rem(115.2);
+    
+  }
+}
+
+.p-other__title-ja {
+  color: #fff;
+  line-height: 1.5;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  background: #413c37;
+  padding-left: rem(8);
+  padding-right: rem(8);
+  display: block;
+  width: fit-content;
+  font-size: rem(24);
+  @include mq(md) {
+    font-size: rem(36);
+  }
+}
+.p-other__title-ja + .p-other__title-ja {
+  margin-top: rem(9);
+}
+.p-other .p-top-interview__slider-card {
+  background: #fff;
+}
+.p-other__prev {
+  position: absolute;
+  left: rem(-27);
+  top: 60%;
+  transform: translateY(-50%);
+}
+.p-other__next {
+  position: absolute;
+  right: rem(-27);
+  top: 60%;
+  transform: translateY(-50%);
+}
+.p-other__nav-img {
+  display: inline-block;
+  width: rem(54);
+}
+.p-other__nav-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
+.my-swiper .swiper-scrollbar {
+  position: static; /* ←スライダー外に自然配置 */
+  height: 2px; /* トラックの太さ */
+  background: #d9d9d9;
+  margin-top: 12px; /* スライダーとの間隔 */
+  overflow: hidden; /* 角丸を効かせる */
+  left: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+}
+
+/* つまみ（ドラッグ部分） */
+.my-swiper .swiper-scrollbar-drag {
+  background: #413c37; /* 任意色 */
+  height: 3px;
+}

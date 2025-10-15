@@ -1,0 +1,174 @@
+@use "../global" as *;
+
+.p-header {
+  background: transparent;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  border-bottom: 1px solid #c4c0bd;
+  transition: 0.3s ease-in-out;
+  backdrop-filter: initial;
+  height: rem(60);
+  @include mq(md) {
+    height: rem(80);
+  }
+}
+.p-header.is-active {
+  backdrop-filter: blur(16px);
+  background: rgba($color: #fff, $alpha: 0.7);
+}
+
+.p-header__inner {
+  height: inherit;
+  padding-left: rem(20);
+  @include mq(md) {
+    padding-left: rem(40);
+    padding-right: rem(40);
+  }
+}
+
+.p-header__content {
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
+
+.p-header__logo {
+  display: flex;
+}
+
+.p-header__home {
+  display: flex;
+  width: 100%;
+  max-width: rem(269);
+  @include mq(md) {
+    max-width: rem(368);
+  }
+}
+.p-header__home svg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.p-header__nav {
+  height: inherit;
+  display: none;
+  @include mq(md) {
+    display: block;
+    margin-left: min(rem(203), calc(203 / 1440) * 100vw);
+    margin-right: rem(40);
+  }
+}
+
+.p-header__lists {
+  display: flex;
+  gap: rem(30);
+  height: inherit;
+}
+
+.p-header__list {
+  height: inherit;
+}
+
+.p-header__link {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.3s ease-in-out;
+  overflow: hidden;
+}
+.p-header__roller {
+  display: flex;
+  flex-direction: column;
+  gap: rem(10);
+  height: rem(32);
+  overflow: hidden;
+}
+.p-header__link-text {
+  height: rem(12);
+  transition: 0.3s ease-in-out;
+  color: #fff;
+  font-size: rem(14);
+  font-weight: 500;
+  font-family: $second-font-family;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  transform: translateY(10px);
+}
+.p-header__link.is-active .p-header__link-text {
+  color: #413c37;
+}
+.p-header__link-text--top {
+  transform: translateY(10px);
+}
+.p-header__link:hover .p-header__link-text--top {
+  transform: translateY(-14px);
+  opacity: 1;
+}
+.p-header__link:hover .p-header__link-text--bottom {
+  transform: translateY(-12px);
+  opacity: 1;
+}
+
+.p-header__path {
+  fill: #fff;
+  transition: 0.3s ease-in-out;
+}
+.p-header__path.is-active {
+  fill: #413c37;
+}
+
+.p-header__btn {
+  display: none;
+  @include mq(md) {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.p-header__btn-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: rem(120);
+  height: rem(30);
+  background: #fff;
+  border-radius: 9999px;
+  transition: 0.3s ease-in-out;
+}
+.p-header__btn-link:hover {
+  opacity: 1;
+  background: #413c37;
+}
+.p-header__btn-link.is-active {
+  background: #413c37;
+  &:hover {
+    background: #fff;
+  } 
+}
+.p-header__btn-text {
+  color: #413c37;
+  font-size: rem(14);
+  font-weight: 500;
+  font-family: $second-font-family;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  transition: 0.3s ease-in-out;
+}
+.p-header__btn-link:hover .p-header__btn-text {
+  color: #fff;
+}
+.p-header__btn-link.is-active .p-header__btn-text {
+  color: #fff;
+}
+.p-header__btn-link.is-active:hover .p-header__btn-text {
+  color: #413c37;
+}

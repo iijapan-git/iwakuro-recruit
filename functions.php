@@ -1,0 +1,432 @@
+<?php
+
+/**
+ * Functions
+ */
+
+/**
+ * WordPress標準機能
+ *
+ * @codex https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/add_theme_support
+ */
+function my_setup()
+{
+	add_theme_support('post-thumbnails'); /* アイキャッチ */
+	add_theme_support('automatic-feed-links'); /* RSSフィード */
+	add_theme_support('title-tag');// ※404ページのタイトル用に残しておく
+	add_theme_support(
+		'html5',
+		array( /* HTML5のタグで出力 */
+			'search-form',
+			'comment-form',
+			'comment-list',
+			'gallery',
+			'caption',
+		)
+	);
+}
+add_action('after_setup_theme', 'my_setup');
+
+/**
+ * CSSとJavaScriptの読み込み
+ *
+ * @codex https://wpdocs.osdn.jp/%E3%83%8A%E3%83%93%E3%82%B2%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%83%A1%E3%83%8B%E3%83%A5%E3%83%BC
+ */
+function my_script_init()
+{
+	wp_enqueue_script('jquery', '//code.jquery.com/jquery-3.6.0.min.js', '', "1.0.1", true);
+	
+	wp_enqueue_style('my', get_template_directory_uri() . '/css/styles.css', array(), filemtime(get_theme_file_path('/css/styles.css')), 'all');
+	if (is_front_page() || is_page('interview_mt') || is_page('interview_yn') || is_page('interview_yh') || is_page('interview_nf') || is_page('interview_rn')) {
+		wp_enqueue_style('swiper-css', get_template_directory_uri() . '/css/swiper-bundle.min.css', array(), filemtime(get_theme_file_path('/css/swiper-bundle.min.css')), 'all');
+		wp_enqueue_script('swiper', '//unpkg.com/swiper@8/swiper-bundle.min.js', array(), null, true);
+		wp_enqueue_script('swiper-js', get_template_directory_uri() . '/js/swiper.js', array('jquery'), filemtime(get_theme_file_path('/js/swiper.js')), true);
+	}
+	if (is_page('about')) {
+	}
+	if (is_page('consultation')) {
+	}
+	if (is_front_page()) {
+		wp_enqueue_script('gsap', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js', '', "1.0.1", true);
+		wp_enqueue_script('scrollTrigger', '//cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js', '', "1.0.1", true);
+		wp_enqueue_script('js-gsap', get_template_directory_uri() . '/js/gsap.js', array('jquery'), filemtime(get_theme_file_path('/js/gsap.js')), true);
+	}
+	wp_enqueue_script('script', get_template_directory_uri() . '/js/script.js', array('jquery'), filemtime(get_theme_file_path('/js/script.js')), true);
+	
+	// ページ情報をJavaScriptに渡す
+	wp_localize_script('script', 'wpPageInfo', array(
+		'isFrontPage' => is_front_page()
+	));
+}
+add_action('wp_enqueue_scripts', 'my_script_init');
+
+
+
+
+
+
+
+/**
+ * メニューの登録
+ *
+ * @codex https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/register_nav_menus
+ */
+// function my_menu_init() {
+// 	register_nav_menus(
+// 		array(
+// 			'global'  => 'ヘッダーメニュー',
+// 			'utility' => 'ユーティリティメニュー',
+// 			'drawer'  => 'ドロワーメニュー',
+// 		)
+// 	);
+// }
+// add_action( 'init', 'my_menu_init' );
+/**
+ * メニューの登録
+ *
+ * 参考：https://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/register_nav_menus
+ */
+
+
+/**
+ * ウィジェットの登録
+ *
+ * @codex http://wpdocs.osdn.jp/%E9%96%A2%E6%95%B0%E3%83%AA%E3%83%95%E3%82%A1%E3%83%AC%E3%83%B3%E3%82%B9/register_sidebar
+ */
+// function my_widget_init() {
+// 	register_sidebar(
+// 		array(
+// 			'name'          => 'サイドバー',
+// 			'id'            => 'sidebar',
+// 			'before_widget' => '<div id="%1$s" class="p-widget %2$s">',
+// 			'after_widget'  => '</div>',
+// 			'before_title'  => '<div class="p-widget__title">',
+// 			'after_title'   => '</div>',
+// 		)
+// 	);
+// }
+// add_action( 'widgets_init', 'my_widget_init' );
+
+
+/**
+ * アーカイブタイトル書き換え
+ *
+ * @param string $title 書き換え前のタイトル.
+ * @return string $title 書き換え後のタイトル.
+ */
+function my_archive_title($title)
+{
+
+	if (is_home()) { /* ホームの場合 */
+		$title = 'ブログ';
+	} elseif (is_category()) { /* カテゴリーアーカイブの場合 */
+		$title = '' . single_cat_title('', false) . '';
+	} elseif (is_tag()) { /* タグアーカイブの場合 */
+		$title = '' . single_tag_title('', false) . '';
+	} elseif (is_post_type_archive()) { /* 投稿タイプのアーカイブの場合 */
+		$title = '' . post_type_archive_title('', false) . '';
+	} elseif (is_tax()) { /* タームアーカイブの場合 */
+		$title = '' . single_term_title('', false);
+	} elseif (is_search()) { /* 検索結果アーカイブの場合 */
+		$title = '「' . esc_html(get_query_var('s')) . '」の検索結果';
+	} elseif (is_author()) { /* 作者アーカイブの場合 */
+		$title = '' . get_the_author() . '';
+	} elseif (is_date()) { /* 日付アーカイブの場合 */
+		$title = '';
+		if (get_query_var('year')) {
+			$title .= get_query_var('year') . '年';
+		}
+		if (get_query_var('monthnum')) {
+			$title .= get_query_var('monthnum') . '月';
+		}
+		if (get_query_var('day')) {
+			$title .= get_query_var('day') . '日';
+		}
+	}
+	return $title;
+};
+add_filter('get_the_archive_title', 'my_archive_title');
+
+
+/**
+ * 抜粋文の文字数の変更
+ *
+ * @param int $length 変更前の文字数.
+ * @return int $length 変更後の文字数.
+ */
+function my_excerpt_length($length)
+{
+	return 80;
+}
+add_filter('excerpt_length', 'my_excerpt_length', 999);
+/**
+ * 抜粋文の省略記法の変更
+ *
+ * @param string $more 変更前の省略記法.
+ * @return string $more 変更後の省略記法.
+ */
+function my_excerpt_more($more)
+{
+	return '...';
+}
+add_filter('excerpt_more', 'my_excerpt_more');
+
+
+// アーカイブの余計なタイトルを削除
+add_filter('get_the_archive_title', function ($title) {
+	if (is_category()) {
+		$title = single_cat_title('', false);
+	} elseif (is_tag()) {
+		$title = single_tag_title('', false);
+	} elseif (is_month()) {
+		$title = single_month_title('', false);
+	}
+	return $title;
+});
+
+add_filter('wpcf7_autop_or_not', '__return_false');
+
+// titleタグの削除 ※不要そうなので削除
+// function remove_title_tag()
+// {
+// 	remove_action('wp_head', '_wp_render_title_tag', 1);
+// }
+// add_action('init', 'remove_title_tag');
+
+
+
+
+
+//ログイン画面のロゴ変更
+function login_logo()
+{
+	echo '<style type="text/css">
+	  #login h1 a {
+		background: url(' . get_template_directory_uri() . '/images/common/login_logo.png) no-repeat top center;
+		background-size:100% auto;
+		width: 70px; //ログインの幅
+		height: 70px; //ログインの高さ
+	  }
+	  body{
+		background: url(' . get_template_directory_uri() . '/images/common/mv_img.jpg) no-repeat top center;
+		background-color:rgba(255,255,255,0.5);
+		background-blend-mode:lighten;
+		background-size: cover;
+	  }
+	</style>';
+}
+add_action('login_head', 'login_logo');
+
+function custom_pagination()
+{
+	global $wp_query;
+	$big = 999999999;
+	$pages = paginate_links(array(
+		'base' => str_replace($big, '%#%', esc_url(get_pagenum_link($big))),
+		'format' => '?paged=%#%',
+		'current' => max(1, get_query_var('paged')),
+		'total' => $wp_query->max_num_pages,
+		'type'  => 'array',
+		'prev_next'   => true,
+		'prev_text'   => '<',
+		'next_text'   => '>',
+	));
+	if (is_array($pages)) {
+		$paged = (get_query_var('paged') == 0) ? 1 : get_query_var('paged');
+		echo '<div class="p-work__pager p-pager"><ul class="p-pager__lists">';
+		foreach ($pages as $page) {
+			echo "<li class='p-pager__list'>$page</li>";
+		}
+		echo '</ul></div>';
+	}
+}
+
+function exclude_multiple_categories_from_homepage($query)
+{
+	if ($query->is_home() && $query->is_main_query()) {
+		$query->set('cat', '-1,-8,-9,-10');
+	}
+}
+add_action('pre_get_posts', 'exclude_multiple_categories_from_homepage');
+
+add_filter('wpcf7_validate_text', 'custom_hiragana_validation_filter', 20, 2);
+add_filter('wpcf7_validate_text*', 'custom_hiragana_validation_filter', 20, 2);
+
+function custom_hiragana_validation_filter($result, $tag)
+{
+	if ('your-hiragana-field' == $tag->name) {
+		$value = isset($_POST[$tag->name]) ? trim(wp_unslash(strtr((string)$_POST[$tag->name], "\n", " "))) : '';
+
+		if (!preg_match("/^[ぁ-ん]+$/u", $value)) {
+			$result->invalidate($tag, "ひらがなで入力してください。");
+		}
+	}
+
+	return $result;
+}
+
+
+
+
+/* ---------- 「投稿」に関する表示を「お知らせ」に変更 ---------- */
+function post_has_archive( $args, $post_type ) {
+	if ( 'post' == $post_type ) {
+		$args['rewrite'] = true;
+		$args['has_archive'] = 'news'; //任意のスラッグ名　←アーカイブページを有効に
+		$args['label'] = 'お知らせ'; //管理画面左ナビに「投稿」の代わりに表示される
+		}
+		return $args;
+}
+add_filter( 'register_post_type_args', 'post_has_archive', 10, 2 );
+
+
+
+
+/* ---------- 投稿の「カテゴリー」と「タグ」の非表示 ---------- */
+function my_unregister_taxonomies() {
+  global $wp_taxonomies;
+  // 「カテゴリー」の非表示
+  // if (!empty($wp_taxonomies['category']->object_type)) {
+  //   foreach ($wp_taxonomies['category']->object_type as $i => $object_type) {
+  //     if ($object_type == 'post') {
+  //       unset($wp_taxonomies['category']->object_type[$i]);
+  //     }
+  //   }
+  // }
+  // 「タグ」の非表示
+  if (!empty($wp_taxonomies['post_tag']->object_type)) {
+    foreach ($wp_taxonomies['post_tag']->object_type as $i => $object_type) {
+      if ($object_type == 'post') {
+        unset($wp_taxonomies['post_tag']->object_type[$i]);
+      }
+    }
+  }
+  return true;
+}
+add_action('init', 'my_unregister_taxonomies');
+
+
+// 「投稿」詳細ページのURLの構造を変更する ドメイン/news/記事パーマリンク(スラッグ)/ へ
+add_filter( 'post_type_archive_link', function( $link, $post_type ) {
+	if ( 'post' === $post_type ) {
+	$post_type_object = get_post_type_object( 'post' );
+	$slug = $post_type_object->has_archive;
+	$link = get_home_url( null, '/' . $slug . '/' );
+	}
+	return $link;
+ }, 10, 2 );
+ function add_article_post_permalink( $permalink ) {
+ $permalink = '/news' . $permalink; //「news」は任意のものに変えて下さい。
+	return $permalink;
+ }
+ add_filter( 'pre_post_link', 'add_article_post_permalink' );
+ function add_article_post_rewrite_rules( $post_rewrite ) {
+	$return_rule = array();
+	foreach ( $post_rewrite as $regex => $rewrite ) {
+	$return_rule['news/' . $regex] = $rewrite; //「news」は任意のものに変えて下さい。
+	}
+ return $return_rule;
+ }
+ add_filter( 'post_rewrite_rules', 'add_article_post_rewrite_rules' );
+
+
+/*--------------------------------------------------
+ * 投稿タイプごとに異なるアーカイブの表示件数を指定
+ * 参考：https://webcreatetips.com/coding/152/
+ *--------------------------------------------------*/
+function change_posts_per_page($query) {
+  if (is_admin() || ! $query->is_main_query())
+    return;
+
+	// デフォルト投稿
+	if ($query->is_post_type_archive('post')) {
+		$query->set('posts_per_page', 8);
+	}
+	// デフォルト投稿 カテゴリー
+	if ($query->is_category()) {
+		$query->set('posts_per_page', 8);
+	}
+	// // カスタム投稿
+  // if ($query->is_post_type_archive('blog')) {
+  //   $query->set('posts_per_page', 12);
+  // }
+  // if ($query->is_tax('blog_cate')) {
+  //   $query->set('posts_per_page', 12);
+  // }
+}
+add_action('pre_get_posts', 'change_posts_per_page');
+
+
+
+
+add_filter('wpcf7_validate_text', 'custom_validation_filter', 999, 2);
+add_filter('wpcf7_validate_text*', 'custom_validation_filter', 999, 2);
+add_filter('wpcf7_validate_checkbox', 'custom_validation_filter', 999, 2);
+add_filter('wpcf7_validate_checkbox*', 'custom_validation_filter', 999, 2);
+
+function custom_validation_filter($result, $tag) {
+    $name = $tag->name;
+
+    // ひらがなチェック（例: your_kana）
+    if ($name === 'your_kana') {
+        $your_kana = isset($_POST['your_kana']) ? trim(wp_unslash($_POST['your_kana'])) : '';
+        if (!preg_match("/^[ぁ-ゞー　 ]*$/u", $your_kana)) {
+            $result->invalidate($tag, "全角ひらがな、全角スペース、または半角スペースのみで入力してください。");
+        }
+    }
+
+    // 年齢チェック（例: your_age）
+    if ($name === 'your_age') {
+        $your_age = isset($_POST['your_age']) ? trim(wp_unslash($_POST['your_age'])) : '';
+        if (!preg_match("/^[0-9]+$/", $your_age)) {
+            $result->invalidate($tag, "年齢は半角数字のみで入力してください。");
+        }
+    }
+
+    // 経験年数チェック（your_years01, your_years02 セットで判定）
+    if ($name === 'your_years01' || $name === 'your_years02') {
+        $years01 = isset($_POST['your_years01']) ? trim(wp_unslash($_POST['your_years01'])) : '';
+        $years02 = isset($_POST['your_years02']) ? trim(wp_unslash($_POST['your_years02'])) : '';
+
+        // 両方空 or 片方だけ入力 の場合
+        if (($years01 === '' && $years02 === '') || ($years01 === '' xor $years02 === '')) {
+            $result->invalidate($tag, "経験年数は年と月を両方入力してください。");
+        } else {
+            // 両方入力がある場合は半角数字チェック
+            if (!preg_match("/^[0-9]+$/", $years01) || !preg_match("/^[0-9]+$/", $years02)) {
+                $result->invalidate($tag, "経験年数は半角数字のみで入力してください。");
+            }
+        }
+    }
+
+    // 応募職種チェック（your_requirement01, your_requirement02, your_requirement03 のいずれか必須）
+    if (in_array($name, ['your_requirement01', 'your_requirement02', 'your_requirement03'], true)) {
+        $req01 = isset($_POST['your_requirement01']) ? (array) $_POST['your_requirement01'] : [];
+        $req02 = isset($_POST['your_requirement02']) ? (array) $_POST['your_requirement02'] : [];
+        $req03 = isset($_POST['your_requirement03']) ? (array) $_POST['your_requirement03'] : [];
+
+        // 3つをまとめる
+        $all_checked = array_merge($req01, $req02, $req03);
+
+        if (empty($all_checked)) {
+            // どれもチェックされていない場合
+            $result->invalidate($tag, "応募職種を1つ以上選択してください。");
+        }
+    }
+
+    return $result;
+}
+
+
+// お問い合わせページを除き、「reCAPTCHA」を読み込ませない
+function load_recaptcha_js() {
+	if ( ! is_page( 'entry' ) ) {
+		wp_deregister_script( 'google-recaptcha' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'load_recaptcha_js',100 );
+
+
+
+// WordPressコアの自動更新を止める
+add_filter( 'auto_update_core', '__return_false' );
