@@ -63,7 +63,7 @@
   </div>
 
   <div class="p-line js-left--vertical">
-    <section class="p-top-about js-left--row">
+    <section class="p-top-about">
       <div class="c-left js-left--vertical">
         <p class="c-left__text">about</p>
       </div>
@@ -110,7 +110,7 @@
         </div>
       </div>
     </section>
-    <section class="p-top-interview js-left--row-interview">
+    <section class="p-top-interview">
       <div class="c-left js-left--vertical-interview">
         <p class="c-left__text">interview</p>
       </div>
@@ -299,7 +299,7 @@
         </div>
       </div>
     </section>
-    <section class="p-top-story js-left--row-story" id="STORY">
+    <section class="p-top-story" id="STORY">
       <div class="c-left js-left--vertical-story">
         <p class="c-left__text">story</p>
       </div>
@@ -382,7 +382,7 @@
         </div>
       </div>
     </section>
-    <section class="p-pickup js-left--row-pickup">
+    <section class="p-pickup">
       <div class="c-left js-left--vertical-pickup">
         <p class="c-left__text">pick up</p>
       </div>

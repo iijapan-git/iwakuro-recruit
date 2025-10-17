@@ -113,22 +113,6 @@ window.addEventListener("DOMContentLoaded", function () {
       },
     }
   );
-  /* gsap.fromTo(
-    ".js-left--row",
-    {
-      "--scaleX": 0,
-    },
-    {
-      "--scaleX": 1,
-      duration: 3,
-      delay: 0.5,
-      scrollTrigger: {
-        trigger: ".p-top-about",
-        start: "0% 50%",
-      },
-      ease: "power3.out",
-    }
-  ); */
   gsap.fromTo(
     ".js-interview-title",
     {
@@ -163,65 +147,4 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   );
 
-  /* gsap.fromTo(
-    ".js-left--row-interview",
-    {
-      "--scaleX": 0,
-    },
-    {
-      "--scaleX": 1,
-      duration: 3,
-      delay: 0.5,
-      scrollTrigger: {
-        trigger: ".p-top-interview",
-        start: "0% 70%",
-      },
-      ease: "power3.out",
-    }
-  ); */
-  /* gsap.fromTo(
-    ".js-left--row-story",
-    {
-      "--scaleX": 0,
-    },
-    {
-      "--scaleX": 1,
-      duration: 3,
-      delay: 0.5,
-      scrollTrigger: {
-        trigger: ".p-top-story",
-        start: "0% 70%",
-      },
-      ease: "power3.out",
-    }
-  ); */
-
-  /* gsap.fromTo(
-    ".js-left--row-pickup",
-    {
-      "--scaleX": 0,
-    },
-    {
-      "--scaleX": 1,
-      duration: 3,
-      delay: 0.5,
-      scrollTrigger: {
-        trigger: ".p-pickup",
-        start: "0% 50%",
-      },
-      ease: "power3.out",
-    }
-  ); */
-
-  // トップストーリーのパララックス効果
-  /*  gsap.to(".p-top-story__img1", {
-    y: -30,
-    ease: "none",
-    scrollTrigger: {
-      trigger: ".p-top-story",
-      start: "top bottom",
-      end: "bottom top",
-      scrub: 1
-    }
-  }); */
 });
