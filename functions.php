@@ -430,3 +430,19 @@ add_action( 'wp_enqueue_scripts', 'load_recaptcha_js',100 );
 
 // WordPressコアの自動更新を止める
 add_filter( 'auto_update_core', '__return_false' );
+
+
+// プラグイン「User Role Editor」を使用している場合、editor権限のユーザーに対して不要なメニューを非表示にする
+function hide_menu_items_for_editor() {
+	if (current_user_can('editor')) {
+			// 「設定」メニュー非表示
+			remove_menu_page('options-general.php');
+
+			// 「ACF」メニュー非表示
+			remove_menu_page('edit.php?post_type=acf-field-group');
+
+			// 「WP Mail SMTP」メニュー非表示
+			remove_menu_page('wp-mail-smtp');
+	}
+}
+add_action('admin_menu', 'hide_menu_items_for_editor', 999);
