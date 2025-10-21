@@ -133,9 +133,6 @@
   <div class="swiper-pagination"></div>
   
   
-  
-  <!-- If we need scrollbar -->
-  <div class="swiper-scrollbar"></div>
 </div>
 <!-- If we need navigation buttons -->
 <div class="swiper-button-prev p-other__prev">
