@@ -42,6 +42,13 @@
   }
 }
 
+.p-top-interview__title .c-section-title__ja {
+  margin-bottom: rem(18);
+  @include mq(md){
+    margin-bottom: 0;
+  }
+}
+
 .p-top-interview__row {
   margin-top: rem(28);
   display: flex;

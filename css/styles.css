@@ -7478,21 +7478,24 @@ a.p-grad-recruitment__head-item {
   top: 0;
   left: 0;
   z-index: -1;
+  overflow: hidden;
 }
 
-.p-mv__img video {
-  aspect-ratio: 375/667;
-  object-fit: cover;
-  width: 100%;
-  height: 100dvh;
+.p-mv__video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100vw;
+  height: 56.25vw;
+  min-height: 100vh;
+  min-width: 177.78vh;
+  transform: translate(-50%, -50%);
 }
-@media screen and (min-width: 768px) {
-  .p-mv__img video {
-    aspect-ratio: initial;
-    width: 100%;
-    height: 100vh;
-    object-position: center center;
-  }
+
+.p-mv__video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
 }
 
 .p-mv__detail {
@@ -10678,6 +10681,15 @@ a.p-grad-recruitment__head-item {
   .p-top-interview__title .c-section-title {
     align-items: center;
     gap: 2.5rem;
+  }
+}
+
+.p-top-interview__title .c-section-title__ja {
+  margin-bottom: 1.125rem;
+}
+@media screen and (min-width: 768px) {
+  .p-top-interview__title .c-section-title__ja {
+    margin-bottom: 0;
   }
 }
 

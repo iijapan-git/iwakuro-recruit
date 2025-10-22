@@ -10,7 +10,18 @@
     <div class="l-inner">
       <div class="p-mv__content">
         <div class="p-mv__img">
-          <video src="<?php echo get_template_directory_uri() ?>/images/common/mv_video.mp4" autoplay muted loop playsinline></video>
+          <div class="p-mv__video">
+            <iframe
+              src="https://player.vimeo.com/video/1129068776?autoplay=1&muted=1&loop=1&background=1"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="mv_video"
+            ></iframe>
+          </div>
+        </div>
+
+          <script src="https://player.vimeo.com/api/player.js"></script>
         </div>
         <div class="p-mv__detail">
           <h2 class="p-mv__title js-mv-title">
