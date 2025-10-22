@@ -12,6 +12,16 @@
         <div class="p-mv__img">
           <div class="p-mv__video">
             <iframe
+              src="https://player.vimeo.com/video/1129439421?autoplay=1&muted=1&loop=1&background=1"
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="mv_video"
+            ></iframe>
+          </div>
+          <?php /* テストサイト用
+          <div class="p-mv__video">
+            <iframe
               src="https://player.vimeo.com/video/1129068776?autoplay=1&muted=1&loop=1&background=1"
               frameborder="0"
               allow="autoplay; fullscreen; picture-in-picture"
@@ -19,6 +29,7 @@
               title="mv_video"
             ></iframe>
           </div>
+          */ ?>
         </div>
 
           <script src="https://player.vimeo.com/api/player.js"></script>
