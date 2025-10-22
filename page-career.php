@@ -6,7 +6,7 @@
         <div class="p-page-mv__detail">
           <ul class="p-page-mv__breadcrumbs">
             <li class="p-page-mv__breadcrumbs-list">
-              <a href="<?php echo esc_url(home_url('/')); ?>" class="p-page-mv__breadcrumbs-link">top</a>
+              <a href="<?php echo esc_url(home_url('/')); ?>" class="p-page-mv__breadcrumbs-link">TOP</a>
             </li>
             <li class="p-page-mv__breadcrumbs-list">
               <span class="p-page-mv__breadcrumbs-link">
@@ -14,7 +14,7 @@
               </span>
             </li>
             <li class="p-page-mv__breadcrumbs-list">
-              <p class="p-page-mv__breadcrumbs-link">募集要項</p>
+              <p class="p-page-mv__breadcrumbs-link">募集要項（キャリア採用）</p>
             </li>
           </ul>
           <div class="p-page-mv__title-wrapper">

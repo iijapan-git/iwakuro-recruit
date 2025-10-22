@@ -12,7 +12,7 @@ Template Name: インタビュー MT
         <div class="p-page-mv__detail p-page-mv__detail--figures">
           <ul class="p-page-mv__breadcrumbs p-page-mv__breadcrumbs--interview p-page-mv__breadcrumbs--interviewSp">
             <li class="p-page-mv__breadcrumbs-list">
-              <a href="<?php echo esc_url(home_url('/')); ?>" class="p-page-mv__breadcrumbs-link">top</a>
+              <a href="<?php echo esc_url(home_url('/')); ?>" class="p-page-mv__breadcrumbs-link">TOP</a>
             </li>
             <li class="p-page-mv__breadcrumbs-list">
               <span class="p-page-mv__breadcrumbs-link">
@@ -21,14 +21,6 @@ Template Name: インタビュー MT
             </li>
             <li class="p-page-mv__breadcrumbs-list">
               <p class="p-page-mv__breadcrumbs-link">仲間を知る</p>
-            </li>
-            <li class="p-page-mv__breadcrumbs-list">
-              <span class="p-page-mv__breadcrumbs-link">
-                <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/breadcrumbs_arrow.svg" alt="" width="10" height="10">
-              </span>
-            </li>
-            <li class="p-page-mv__breadcrumbs-list">
-              <p class="p-page-mv__breadcrumbs-link">M.T.</p>
             </li>
           </ul>
           <div class="p-page-mv__title-wrapper">
@@ -39,7 +31,7 @@ Template Name: インタビュー MT
           </div>
           <ul class="p-page-mv__breadcrumbs p-page-mv__breadcrumbs--interview p-page-mv__breadcrumbs--interviewPc">
             <li class="p-page-mv__breadcrumbs-list">
-              <a href="<?php echo esc_url(home_url('/')); ?>" class="p-page-mv__breadcrumbs-link">top</a>
+              <a href="<?php echo esc_url(home_url('/')); ?>" class="p-page-mv__breadcrumbs-link">TOP</a>
             </li>
             <li class="p-page-mv__breadcrumbs-list">
               <span class="p-page-mv__breadcrumbs-link">

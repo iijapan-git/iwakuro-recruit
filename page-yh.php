@@ -12,7 +12,7 @@ Template Name: インタビュー YH
         <div class="p-page-mv__detail p-page-mv__detail--figures">
           <ul class="p-page-mv__breadcrumbs p-page-mv__breadcrumbs--interview p-page-mv__breadcrumbs--interviewSp">
             <li class="p-page-mv__breadcrumbs-list">
-              <a href="<?php echo esc_url(home_url('/')); ?>" class="p-page-mv__breadcrumbs-link">top</a>
+              <a href="<?php echo esc_url(home_url('/')); ?>" class="p-page-mv__breadcrumbs-link">TOP</a>
             </li>
             <li class="p-page-mv__breadcrumbs-list">
               <span class="p-page-mv__breadcrumbs-link">
@@ -39,7 +39,7 @@ Template Name: インタビュー YH
           </div>
           <ul class="p-page-mv__breadcrumbs p-page-mv__breadcrumbs--interview p-page-mv__breadcrumbs--interviewPc">
             <li class="p-page-mv__breadcrumbs-list">
-              <a href="<?php echo esc_url(home_url('/')); ?>" class="p-page-mv__breadcrumbs-link">top</a>
+              <a href="<?php echo esc_url(home_url('/')); ?>" class="p-page-mv__breadcrumbs-link">TOP</a>
             </li>
             <li class="p-page-mv__breadcrumbs-list">
               <span class="p-page-mv__breadcrumbs-link">

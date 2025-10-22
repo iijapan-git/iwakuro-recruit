@@ -11,7 +11,7 @@
       <div class="p-about-mv__breadcrumbs">
         <ul class="p-page-mv__breadcrumbs">
           <li class="p-page-mv__breadcrumbs-list">
-            <a href="<?php echo esc_url(home_url('/')); ?>" class="p-page-mv__breadcrumbs-link">top</a>
+            <a href="<?php echo esc_url(home_url('/')); ?>" class="p-page-mv__breadcrumbs-link">TOP</a>
           </li>
           <li class="p-page-mv__breadcrumbs-list">
             <span class="p-page-mv__breadcrumbs-link">
