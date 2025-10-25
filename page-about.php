@@ -19,7 +19,7 @@
             </span>
           </li>
           <li class="p-page-mv__breadcrumbs-list">
-            <p class="p-page-mv__breadcrumbs-link"><span class="u-font-outfit">3</span>分で分かる岩黒製作所</p>
+            <p class="p-page-mv__breadcrumbs-link"><span class="u-font-outfit">3</span>分でわかる岩黒製作所</p>
           </li>
         </ul>
       </div>
@@ -28,7 +28,7 @@
         <p class="p-about-mv__en c-page-en">ABOUT</p>
         <div class="p-about-mv__wrap">
           <h1 class="p-about-mv__title">
-            <img src="<?php echo get_template_directory_uri(); ?>/images/about/mv_read.png" alt="3分で分かる岩黒製作所" width="536" height="218" loading="lazy" decoding="async">
+            <img src="<?php echo get_template_directory_uri(); ?>/images/about/mv_read.png" alt="3分でわかる岩黒製作所" width="536" height="218" loading="lazy" decoding="async">
           </h1>
           <p class="p-about-mv__read">
             岩黒製作所は、富山にある“小さな一流企業”｡<br>

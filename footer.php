@@ -18,7 +18,7 @@
                     <li class="p-footer__list">
                         <ul class="p-footer__list-left">
                             <li class="p-footer__list-leftList">
-                                <a href="<?php echo esc_url(home_url('/about/')); ?>" class="p-footer__link"><span>3</span>分で分かる岩黒製作所</a>
+                                <a href="<?php echo esc_url(home_url('/about/')); ?>" class="p-footer__link"><span>3</span>分でわかる岩黒製作所</a>
                             </li>
                             <li class="p-footer__list-leftList">
                                 <a href="<?php echo esc_url(home_url('/story01/')); ?>" class="p-footer__link"><span>STORY #<span class="u-font-outfit">01</span></span> 岩黒製作所だからできること｡</a>

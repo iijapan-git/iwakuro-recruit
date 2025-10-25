@@ -179,7 +179,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <a href="<?php echo esc_url(home_url('/about/')); ?>" class="p-drawer-content__link">
                                         <div class="p-drawer-content__link-row">
                                             <p class="p-drawer-content__link-en">about</p>
-                                            <p class="p-drawer-content__link-ja"><span>3</span>分で分かる岩黒製作所</p>
+                                            <p class="p-drawer-content__link-ja"><span>3</span>分でわかる岩黒製作所</p>
                                         </div>
                                         <div class="p-drawer-content__link-arrow">
                                             <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/drawer_arrow.svg" alt="" width="12" height="8">
@@ -448,7 +448,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                     <a href="<?php echo esc_url(home_url('/about/')); ?>" class="p-drawer-content__link">
                                         <div class="p-drawer-content__link-row">
                                             <p class="p-drawer-content__link-en">about</p>
-                                            <p class="p-drawer-content__link-ja"><span>3</span>分で分かる岩黒製作所</p>
+                                            <p class="p-drawer-content__link-ja"><span>3</span>分でわかる岩黒製作所</p>
                                         </div>
                                         <div class="p-drawer-content__link-arrow">
                                             <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/drawer_arrow.svg" alt="" width="12" height="8">
