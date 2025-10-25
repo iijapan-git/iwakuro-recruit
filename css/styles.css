@@ -8167,7 +8167,9 @@ a.p-grad-recruitment__head-item {
 .p-page-mv__breadcrumbs {
   display: flex;
   align-items: center;
-  gap: 1px;
+  flex-wrap: wrap;
+  column-gap: 1px;
+  row-gap: 0.375rem;
 }
 
 .p-page-mv__breadcrumbs-link {

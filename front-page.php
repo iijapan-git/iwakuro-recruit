@@ -19,17 +19,6 @@
               title="mv_video"
             ></iframe>
           </div>
-          <?php /* テストサイト用
-          <div class="p-mv__video">
-            <iframe
-              src="https://player.vimeo.com/video/1129068776?autoplay=1&muted=1&loop=1&background=1"
-              frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              referrerpolicy="strict-origin-when-cross-origin"
-              title="mv_video"
-            ></iframe>
-          </div>
-          */ ?>
         </div>
 
           <script src="https://player.vimeo.com/api/player.js"></script>
@@ -539,7 +528,7 @@
             </ul>
           </div>
           <div class="p-top-news__btn p-top-news__btn--mobile">
-            <a href="" class="c-btn">
+            <a href="<?php echo esc_url(home_url('/news/')); ?>" class="c-btn">
               <p class="c-btn__text">view more</p>
               <span class="c-btn__arrow">
                 <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -38,7 +38,9 @@
 .p-page-mv__breadcrumbs {
   display: flex;
   align-items: center;
-  gap: 1px;
+  flex-wrap: wrap;
+  column-gap: 1px;
+  row-gap: rem(6);
 }
 
 .p-page-mv__breadcrumbs-list {
