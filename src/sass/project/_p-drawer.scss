@@ -324,11 +324,15 @@
   fill: #fff;
 }
 .p-drawer__logo {
+  display: none;
   position: fixed;
   left: rem(20);
   top: rem(17);
+  @include mq(md){
+    // display: block;
+  }
 }
-.p-header__content.is-active .p-drawer__logo {
+.p-header__drawer.is-active .p-drawer__logo {
   display: none;
   @include mq(md){
     display: flex;

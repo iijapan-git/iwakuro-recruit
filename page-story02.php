@@ -89,7 +89,7 @@
                 <p class="p-hear__question-text">なぜ、就職先に<br>岩黒製作所を選んだのですか？</p>
               </div>
               <div class="p-hear__text-wrapper">
-                <p class="p-hear__text">岩黒製作所と取引のある会社に勤める知人から「知られざる優良企業」と勧められて応募しました。前職の船に関わる会社では出来上がった製品のメンテナンスをしていましたが、０から設計、組立と作り上げていくモノづくりが新鮮で面白く、入社の決め手になりました。</p>
+                <p class="p-hear__text">岩黒製作所と取引のある会社に勤める知人から「知られざる優良企業」と勧められて応募しました。前職の船に関わる会社では出来上がった製品のメンテナンスをしていましたが、<span class="u-font-outfit">０</span>から設計、組立と作り上げていくモノづくりが新鮮で面白く、入社の決め手になりました。</p>
               </div>
             </div>
             <figure class="p-hear__img u-desktop">
@@ -134,7 +134,7 @@
             <div class="p-reason__detail" data-number="02">
               <p class="p-reason__detailTitle c-text-gradation c-text-gradation--page">成長性のある市場</p>
               <div class="p-reason__text-wrapper">
-                <p class="p-reason__text">「人生100年時代」の今、政府による健康寿命を延ばす取り組みが始まっています｡特に、健康づくりに関する医療・ヘルスケア産業はますます成長が期待される分野｡包装機械のニーズも増えていくと予想され、私たちの技術が求められる場もさらに広がっていくでしょう｡将来性のある業界で、安定したキャリアを築くチャンスです｡</p>
+                <p class="p-reason__text">「人生<span class="u-font-outfit">100</span>年時代」の今、政府による健康寿命を延ばす取り組みが始まっています｡特に、健康づくりに関する医療・ヘルスケア産業はますます成長が期待される分野｡包装機械のニーズも増えていくと予想され、私たちの技術が求められる場もさらに広がっていくでしょう｡将来性のある業界で、安定したキャリアを築くチャンスです｡</p>
               </div>
             </div>
             <figure class="p-reason__img">
@@ -145,7 +145,7 @@
             <div class="p-reason__detail" data-number="03">
               <p class="p-reason__detailTitle c-text-gradation c-text-gradation--page">専門性が強みになる</p>
               <div class="p-reason__text-wrapper">
-                <p class="p-reason__text">医薬品の製造には、高い水準と安定した品質を維持することに加え、GMP（Good Manufacturing Practice）という製造管理および品質管理の厳しい基準を厳守する必要があります｡これは、医薬品メーカーだけでなく医薬品包装機械メーカーにおいても同様の高い専門性が求められます｡当社は創業以来、医療・製薬に特化し、高度な専門知識と技術力を培ってきました｡入社後は、モノづくりを通じて、医療業界ならではの高い専門性を身につけることができます｡</p>
+                <p class="p-reason__text">医薬品の製造には、高い水準と安定した品質を維持することに加え、GMP（Good Manufacturing Practice）という製造管理および品質管理の厳しい基準を厳守する必要があります｡これは、医薬品メーカーだけでなく医薬品包装機械メーカーにおいても同様の高い専門性が求められます｡当社は創業以来、医療・製薬業界に特化し、高度な専門知識と技術力を培ってきました｡入社後は、モノづくりを通じて、業界ならではの高い専門性を身につけることができます｡</p>
               </div>
             </div>
             <figure class="p-reason__img">
@@ -156,7 +156,7 @@
             <div class="p-reason__detail" data-number="04">
               <p class="p-reason__detailTitle c-text-gradation c-text-gradation--page">安定したマーケット</p>
               <div class="p-reason__text-wrapper">
-                <p class="p-reason__text">医薬品市場は、景気の影響を極めて受けにくい安定性の高いマーケットとして知られています｡実際に、国内の医療用医薬品市場は10兆円を超え、3年連続で過去最高を更新｡こうした堅調な成長を背景に、当社の事業も安定性と将来性の両面で大きな強みを持ち、社員が長く安心して働ける環境が整っています｡</p>
+                <p class="p-reason__text">医薬品市場は、景気の影響を極めて受けにくい安定性の高いマーケットとして知られています｡実際に、国内の医療用医薬品市場は<span class="u-font-outfit">10</span>兆円を超え、<span class="u-font-outfit">3</span>年連続で過去最高を更新｡こうした堅調な成長を背景に、当社の事業も安定性と将来性の両面で大きな強みを持ち、社員が長く安心して働ける環境が整っています｡</p>
               </div>
             </div>
             <figure class="p-reason__img">
@@ -168,7 +168,7 @@
           <p class="p-reason__bottom-text">岩黒製作所は、医療・製薬業界に特化し、<br class="u-mobile">国内トップシェアを誇る技術力があります。<br>
             また、GMP化やFA化などお客さまが求める<br class="u-mobile">多様なニーズに対応し、<br class="u-mobile">日々改良を続けています。</p>
           <div class="p-reason__bottom-gradation">
-            <p class="p-reason__bottom-text--gradation">医薬品業界が未経験でも、<br class="u-mobile">あなたのスキルを活かせる<br class="u-mobile">様々な職種があります｡<br>ぜひ一度、岩黒製作所の工場見学に<br class="u-mobile">お越しください｡</p>
+            <p class="p-reason__bottom-text--gradation">医療･製薬業界が未経験でも、<br class="u-mobile">あなたのスキルを活かせる<br class="u-mobile">様々な職種があります｡<br>ぜひ一度、岩黒製作所の工場見学に<br class="u-mobile">お越しください｡</p>
       
           </div>
         </div>

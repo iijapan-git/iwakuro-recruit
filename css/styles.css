@@ -3260,16 +3260,16 @@ a:hover .p-about-story__link-img img {
 }
 
 .p-drawer__logo {
+  display: none;
   position: fixed;
   left: 1.25rem;
   top: 1.0625rem;
 }
-
-.p-header__content.is-active .p-drawer__logo {
+.p-header__drawer.is-active .p-drawer__logo {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .p-header__content.is-active .p-drawer__logo {
+  .p-header__drawer.is-active .p-drawer__logo {
     display: flex;
   }
 }
@@ -5820,6 +5820,12 @@ a.p-grad-recruitment__head-item {
   display: flex;
   align-items: center;
   height: inherit;
+  justify-content: space-between;
+}
+@media screen and (min-width: 768px) {
+  .p-header__content {
+    justify-content: flex-start;
+  }
 }
 
 .p-header__logo {
@@ -5922,6 +5928,29 @@ a.p-grad-recruitment__head-item {
 
 .p-header__path.is-active {
   fill: #413c37;
+}
+
+.p-header__drawer.is-active {
+  width: 100%;
+  background: #413c37;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10000;
+}
+@media screen and (min-width: 768px) {
+  .p-header__drawer.is-active {
+    display: none;
+  }
+}
+
+.p-header__drawer.is-active .p-drawer__logo {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .p-header__drawer.is-active .p-drawer__logo {
+    display: none;
+  }
 }
 
 .p-header__btn {

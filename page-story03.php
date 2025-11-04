@@ -86,7 +86,7 @@
             <div class="p-reason__detail" data-number="02">
               <p class="p-reason__detailTitle p-reason__detailTitle--gradation">プロフェッショナル<br class="u-mobile">への道は、現場から｡</p>
               <div class="p-reason__text-wrapper">
-                <p class="p-reason__text">すべての社員がまず「現場」からキャリアをスタートするのが岩黒流。それは私たちがつくっている機械のことを細部までしっかり理解してほしいからです。仕上課で2～3年間、先輩とチームを組み、図面の見方から組立の技術、機械調整、修理対応まで、実践を通してしっかり学び、経験を積みます。その後、希望の職種へキャリアアップ。現場を知ることこそ、機械づくりのプロへの近道です。</p>
+                <p class="p-reason__text">すべての社員がまず「現場」からキャリアをスタートするのが岩黒流。それは私たちがつくっている機械のことを細部までしっかり理解してほしいからです。仕上課で<span class="u-font-outfit">2～3</span>年間、先輩とチームを組み、図面の見方から組立の技術、機械調整、修理対応まで、実践を通してしっかり学び、経験を積みます。その後、希望の職種へキャリアアップ。現場を知ることこそ、機械づくりのプロへの近道です。</p>
               </div>
             </div>
             <figure class="p-reason__img">

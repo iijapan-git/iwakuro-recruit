@@ -56,7 +56,7 @@
               <p class="p-feature__list-bg">技術力</p>
             </div>
             <p class="p-feature__list-text">医科業界に特化した<br>
-              この道<span>77</span>年のプロだから、<br>
+              この道<span class="u-font-outfit">77</span>年のプロだから、<br>
               技術と知識がケタ違い。</p>
             <figure class="p-feature__list-img">
               <img decoding="async" loading="lazy" src="<?php echo get_template_directory_uri() ?>/images/common/feature_img1.jpg" alt="" width="100" height="100">
@@ -204,7 +204,7 @@
           <div class="p-project__block flCenter">
             <div class="p-project__block-detail">
               <p class="p-project__block-title">世界最速！革新的な<br class="u-mobile">包装マシンを開発</p>
-              <p class="p-project__middle">「充填･包装･カット･集積」の<br class="u-mobile">一連動作を電子制御により最適化！</p>
+              <p class="p-project__middle">「充填･包装･カット･集積」の一連動作を<br>電子制御により最適化！</p>
               <p class="p-project__text">標準速度の約<span>5</span>倍となる驚異の分速<span>330</span>ショットを実現。<br class="u-desktop">
                 高速化しても極力不良品を出さない補正制御プログラムなど革新的な技術を多数採用し、<br class="u-desktop">稼働の安定性と高度な生産処理能力を両立しました。</p>
             </div>
@@ -213,7 +213,7 @@
             <div class="p-project__block-detail">
               <p class="p-project__block-title">ムダな廃棄を<br class="u-mobile">大幅に減らすことに成功</p>
               <p class="p-project__middle">NG列のみを自動で排出ラインへ振り分け、<br class="u-mobile">廃棄量を最小限に！</p>
-              <p class="p-project__text">従来は1列でも不良品が出ると全列を排出していましたが、独自開発のサーボモータシステムにより各列個別制御が可能に。生産効率と資材コストの両面で貢献するスマートな集積システムへ進化させました。</p>
+              <p class="p-project__text">従来は<span class="u-font-outfit">1</span>列でも不良品が出ると全列を排出していましたが、独自開発のサーボモータシステムにより各列個別制御が可能に。生産効率と資材コストの両面で貢献するスマートな集積システムへ進化させました。</p>
             </div>
             <figure class="p-project__img">
               <video autoplay muted loop playsinline>
@@ -225,9 +225,8 @@
           <div class="p-project__block flCenter">
             <div class="p-project__block-detail">
               <p class="p-project__block-title">自動化で品質の安定化と<br class="u-mobile">作業効率を向上</p>
-              <p class="p-project__middle">現場の声を反映して<br class="u-mobile">３連包⇔４連包の金型交換も自動化！</p>
-              <p class="p-project__text">切り離し工程では、常に適切な位置で切断する新技術を構築。<br>
-                センサーがフィルムの目印を読み取り、季節の温湿度変化で生じるフィルムの伸縮も自動補正します。<br class="u-desktop">誰でも扱いやすい包装ラインを実現しました。</p>
+              <p class="p-project__middle">現場の声を反映して<br class="u-mobile"><span class="u-font-outfit">３</span>連包⇔<span class="u-font-outfit">４</span>連包の金型交換も自動化！</p>
+              <p class="p-project__text">切り離し工程では、常に適切な位置で切断する新技術を構築。<br class="u-desktop">センサーがフィルムの目印を読み取り、季節の温湿度変化で生じるフィルムの伸縮も自動補正します。<br class="u-desktop">誰でも扱いやすい包装ラインを実現しました。</p>
             </div>
           </div>
         </div>
