@@ -4999,6 +4999,7 @@ input[type=radio]:checked + .wpcf7-list-item-label::before {
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) {
   .p-grad-cta__enRead {
@@ -5021,7 +5022,8 @@ input[type=radio]:checked + .wpcf7-list-item-label::before {
 }
 @media screen and (min-width: 768px) {
   .p-grad-cta__enRead.bottom {
-    bottom: 7.5rem;
+    bottom: auto;
+    top: 72.5%;
   }
 }
 
@@ -5034,6 +5036,16 @@ input[type=radio]:checked + .wpcf7-list-item-label::before {
 @media screen and (min-width: 768px) {
   .p-grad-cta__enRead img {
     aspect-ratio: 1440/78;
+  }
+}
+@media screen and (min-width: 1441px) {
+  .p-grad-cta__enRead img {
+    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 120rem;
+    aspect-ratio: auto;
   }
 }
 

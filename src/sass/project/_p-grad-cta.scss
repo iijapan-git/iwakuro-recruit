@@ -17,6 +17,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
+  overflow: hidden;
   @include mq(md){
     width: 100%;
     max-width: 100%;
@@ -33,7 +34,9 @@
 .p-grad-cta__enRead.bottom {
   bottom: rem(66);
   @include mq(md){
-    bottom: rem(120);
+    bottom: auto;
+    top: 72.5%;
+    // bottom: rem(120);
   }
 }
 
@@ -44,6 +47,14 @@
   aspect-ratio: 335 / 28;
   @include mq(md){
     aspect-ratio: 1440 / 78;
+  }
+  @include mq(xl){
+    height: auto;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: rem(1920); // 小さな画面でも左右が切れないよう確保
+    aspect-ratio: auto;
   }
 }
 

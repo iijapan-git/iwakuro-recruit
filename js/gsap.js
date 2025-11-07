@@ -82,23 +82,6 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   );
   gsap.fromTo(
-    ".js-about-gradation",
-    {
-      "--scaleX": 0,
-    },
-    {
-      "--scaleX": 1,
-      duration: 3,
-      delay: 0.5,
-      scrollTrigger: {
-        trigger: ".p-top-about",
-        start: "0% 30%",
-      },
-      stagger: 0.4,
-      ease: "power3.out",
-    }
-  );
-  gsap.fromTo(
     ".js-left--vertical",
     {
       "--scaleY": 0,
@@ -126,23 +109,6 @@ window.addEventListener("DOMContentLoaded", function () {
         trigger: ".p-top-interview",
         start: "0% 60%",
       },
-      ease: "power3.out",
-    }
-  );
-  gsap.fromTo(
-    ".js-interview-gradation",
-    {
-      "--scaleX": 0,
-    },
-    {
-      "--scaleX": 1,
-      duration: 3,
-      delay: 0.5,
-      scrollTrigger: {
-        trigger: ".p-top-interview",
-        start: "0% 50%",
-      },
-      stagger: 0.4,
       ease: "power3.out",
     }
   );
